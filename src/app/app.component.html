@@ -1,3 +1,15 @@
-<div class="d-flex justify-content-center w-100">
-  
+<div class="d-flex flex-column align-items-center w-100">
+  <button class="btn btn-primary m-4" (click)="toggle()">
+    Second comp toggle
+  </button>
+  <div class="d-flex justify-content-center w-100 p-2">
+    <div class="d-flex justify-content-center w-50 border border-5">
+      <p>First Component</p>
+    </div>
+    <ng-container *ngIf="Check()">
+      <div class="d-flex justify-content-center w-50 border border-5">
+        <app-first></app-first>
+      </div>
+    </ng-container>
+  </div>
 </div>
